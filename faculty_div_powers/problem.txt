@@ -1,0 +1,21 @@
+9117. Faculty Dividing Powers
+Problem code: GCPC11A
+
+Fred Faculty and Paul Power love big numbers. Day after day Fred chooses a random integer n and he computes n!. His friend Paul amuses himself by computing several powers of his randomly chosen integer k like k2, k3 and so on. On a hot summer day, Fred and Paul got really, really bored, so they decided to play a joke on their buddy Dave Divider. Fred chooses a random integer n while Paul chooses a random integer k. They want Dave to find the biggest integer i such that ki divides n! without a remainder, otherwise they will throw a cake in Dave's face. Because Dave does not like cakes in his face, he wants you to help him finding that integer i.
+Input
+
+The first line contains the number of test cases t (1 ≤ t ≤ 100). Each of the following t lines contains the two numbers n,k (2 ≤ n ≤ 1018, 2 ≤ k ≤ 1012) separated by one space.
+Output
+
+For each test case, print the maximum integer i on a separate line.
+Example
+
+Input:
+2
+5 2
+10 10
+
+Output:
+3
+2
+
