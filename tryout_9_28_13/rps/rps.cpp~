@@ -1,0 +1,56 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+
+int main()
+{
+    /*
+    map<char, char> beat;
+    beat.insert(pair<char, char> ('R', 'P'));
+    beat.insert(pair<char, char> ('P', 'S'));
+    beat.insert(pair<char, char> ('S', 'R'));
+    int input;
+    cin >> input;
+    while (input!=0)
+    {
+        int num = input/3;
+        char start;
+        int game = input%3;
+        if (game==0)
+            start='R';
+        else if (game==1)
+            start='P';
+        else
+            start='S';
+        for (int i = 0; i < num; i++)
+            start = beat[start];
+        cout << start << endl;
+        cin >> input;
+    }
+*/
+    int beat[2];  //0 R, 1 P, 2 S
+    beat[0] = 1;
+    beat[1] = 2;
+    beat[2] = 0;
+    int input;
+    cin >> input;
+    while (input!=0)
+    {
+        int num = input/3;
+        int game = input%3;
+        for (int i = 0; i < num; i++)
+            game = beat[game];
+        if (game == 0)
+            cout << 'R' << endl;
+        if (game == 1)
+            cout << 'P' << endl;
+        if (game == 2)
+            cout << 'S' << endl;
+        cin >> input;
+    }
+
+
+
+
+}
