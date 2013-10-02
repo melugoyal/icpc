@@ -9,21 +9,22 @@ int main()
     beat[0] = 1;
     beat[1] = 2;
     beat[2] = 0;
-    long input;
+    unsigned long long input;
+    unsigned long long num;
     cin >> input;
-    map<int, char> remember;
-    map<int, char> rps;
+    map<unsigned long long, char> remember;
+    char rps[3];
     rps[0]='R';
     rps[1]='P';
     rps[2]='S';
     bool skip_calc = 0;
     while (input!=0)
     {
-        if (!(skip_calc))
+        if (!(skip_calc))           //skip calculating input if it's a repeat
         {
-            long num = input/3;
+            num = input/3;
             int game = input%3;
-            int num_times = num%3;      
+            int num_times = num%3;
             for (int i = 0; i < num_times; i++)
                 game = beat[game];
             cout << rps[game] << endl;
